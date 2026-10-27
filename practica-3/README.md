@@ -67,3 +67,4 @@ $$
 
 ![ModelCard](imagen.png)
 
+Cuenta de GitHub: @AbigailVarlis
