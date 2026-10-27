@@ -66,5 +66,3 @@ $$
 ## 5. Evidencia
 
 ![ModelCard](imagen.png)
-
-Cuenta de GitHub: @AbigailVarlis
