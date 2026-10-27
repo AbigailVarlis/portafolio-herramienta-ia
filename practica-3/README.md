@@ -8,10 +8,10 @@
 
 | Nombre completo                 | Matrícula |
 | ------------------------------- | --------- |
-| Pablo Israel Ávalos Moreno      | 198642-8  |
-| Héctor Ulises Serrano Ramos     | 198436-4  |
-| María Isabella Rangel Gutiérrez | 198102-8  |
-| Jessica Abigail Tovar Solís     | 198078-6  |
+| Pablo Israel Ávalos Moreno      | ...  |
+| Héctor Ulises Serrano Ramos     | ...  |
+| María Isabella Rangel Gutiérrez | ...  |
+| Jessica Abigail Tovar Solís     | ...  |
 
 ## 1. Caso de uso
 
@@ -43,12 +43,10 @@ flowchart TD
 | Limitación o sesgo declarado | Disminución en la precisión de identificación cuando las fotografías presentan iluminación deficiente, ángulos muy inclinados o cuando el rostro/cuerpo de la mascota se encuentra parcialmente ocluido. |
 
 ## 3. Viabilidad de hardware
-  $$
+
+$$
 
 \text{Memoria mínima} = N \times 4\ \text{bytes} \approx \ ?\ \text{GB}
-
-$$
-$$
 
 \text{Memoria mínima} = 22,100,000 \times 4\ \text{bytes} \approx 88,400,000\ \text{GB}
 
@@ -67,5 +65,5 @@ $$
 
 ## 5. Evidencia
 
-![[Captura de pantalla 2026-09-24 102403.png]]
+![ModelCard](imagen.png)
 
