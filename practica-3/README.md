@@ -48,6 +48,10 @@ $$
 
 \text{Memoria mínima} = N \times 4\ \text{bytes} \approx \ ?\ \text{GB}
 
+$$
+
+$$
+
 \text{Memoria mínima} = 22,100,000 \times 4\ \text{bytes} \approx 88,400,000\ \text{GB}
 
 $$
