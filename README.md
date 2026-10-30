@@ -14,8 +14,9 @@ Estudio Ingeniería en IA y me interesa el \*\*procesamiento de lenguaje natural
 
 ## Prácticas
 
-[Práctica 3: README del proyecto](practica-3/README.md)
-[Práctica 4: Comandos de terminal y Git](notas/comandos.md)
+- [Práctica 3: README del proyecto](practica-3/README.md)
+  
+- [Práctica 4: Comandos de terminal y Git](notas/comandos.md)
 
 
 
