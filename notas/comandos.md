@@ -6,3 +6,4 @@
 | `git init` | Convertir una carpeta en repositorio |
 | `git add` | Preparar cambios para el commit |
 | `git commit -m` | Guardar una foto con un mensaje |
+| `git log --oneline` | Ver una línea por commit |
