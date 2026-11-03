@@ -49,7 +49,7 @@ $$
 $$
 
 $$
-\text{Memoria mínima} = 22,100,000 \times 4\ \text{bytes} \approx 88,400,000\ \text[MB}
+\text{Memoria mínima} = 22,100,000 \times 4\ \text{bytes} \approx 88,400,000\ \text[B}
 $$
 
 - **VRAM disponible en Colab:** 12.67 GB (GPU T4)
