@@ -41,10 +41,9 @@ def clasificar(imagen):
     tiempo_texto = f"{duracion:.2f} s"
     return predicciones, tiempo_texto
 
-
 demo = gr.Interface(
     fn=clasificar,
-    inputs=gr.Image(type="pil", label="Sube o arrastra una imagen"),
+    inputs=gr.Image(type="pil", label="Sube o arrastra una IMAGEN"),
     outputs=[
         gr.Label(num_top_classes=3, label="Top 3 predicciones (%)"),
         gr.Textbox(label="Tiempo de inferencia"),
