@@ -1,3 +1,4 @@
+from pathlib import Path
 import gradio as gr
 import torch
 from transformers import pipeline
@@ -9,6 +10,18 @@ classifier = pipeline(
     model="google/mobilenet_v2_1.0_224",
     device=device,
 )
+
+
+def cargar_ejemplos(carpeta="ejemplos"):
+    ruta = Path(carpeta)
+    if not ruta.is_dir():
+        return []
+    extensiones = {".png", ".jpg", ".jpeg", ".webp", ".bmp"}
+    return [
+        [str(archivo)]
+        for archivo in sorted(ruta.iterdir())
+        if archivo.is_file() and archivo.suffix.lower() in extensiones
+    ]
 
 
 def clasificar(imagen):
@@ -23,6 +36,7 @@ demo = gr.Interface(
     fn=clasificar,
     inputs=gr.Image(type="pil", label="Sube o arrastra una imagen"),
     outputs=gr.Label(num_top_classes=3, label="Top 3 predicciones (%)"),
+    examples=cargar_ejemplos("ejemplos"),
     title="¿Qué hay en la foto?",
     description="Clasifica imágenes usando el modelo google/mobilenet_v2_1.0_224.",
 )
