@@ -1,4 +1,5 @@
 from pathlib import Path
+import time
 import gradio as gr
 import torch
 from transformers import pipeline
@@ -26,16 +27,28 @@ def cargar_ejemplos(carpeta="ejemplos"):
 
 def clasificar(imagen):
     if imagen is None:
-        return {}
+        return {}, "0.00 s"
 
+    inicio = time.perf_counter()
     resultados = classifier(imagen, top_k=3)
-    return {item["label"]: round(float(item["score"]) * 100, 2) for item in resultados}
+    if torch.cuda.is_available():
+        torch.cuda.synchronize()
+    duracion = time.perf_counter() - inicio
+
+    predicciones = {
+        item["label"]: round(float(item["score"]) * 100, 2) for item in resultados
+    }
+    tiempo_texto = f"{duracion:.2f} s"
+    return predicciones, tiempo_texto
 
 
 demo = gr.Interface(
     fn=clasificar,
     inputs=gr.Image(type="pil", label="Sube o arrastra una imagen"),
-    outputs=gr.Label(num_top_classes=3, label="Top 3 predicciones (%)"),
+    outputs=[
+        gr.Label(num_top_classes=3, label="Top 3 predicciones (%)"),
+        gr.Textbox(label="Tiempo de inferencia"),
+    ],
     examples=cargar_ejemplos("ejemplos"),
     title="¿Qué hay en la foto?",
     description="Clasifica imágenes usando el modelo google/mobilenet_v2_1.0_224.",
