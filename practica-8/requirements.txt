@@ -1,0 +1,4 @@
+spaces
+pillow==13.0.0
+torch==2.13.0
+transformers==5.23.0
